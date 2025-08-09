@@ -151,4 +151,75 @@ function clearCalculator() {
     expression = '';
     updateDisplay();
 }
+// Hook up digit buttons (numbers & decimal)
+document.querySelectorAll('.btn.digit').forEach(button => {
+    button.addEventListener('click', () => {
+        const value = button.textContent;
+
+        if (value === '.') {
+            inputDecimal();
+        } else {
+            inputDigit(value);
+        }
+        updateDecimalButton();
+    });
+});
+
+// Hook up operator buttons
+document.querySelectorAll('.btn.operator').forEach(button => {
+    button.addEventListener('click', () => {
+        const symbol = button.textContent;
+        const normalized = (symbol === 'x' || symbol === 'X') ? '*' : symbol;
+        handleOperator(normalized);
+    });
+});
+
+//Keyboard support
+document.addEventListener('keydown', (event) => {
+    const key = event.key;
+
+    // Numbers (0–9)
+    if (!isNaN(key) && key !== ' ') {
+        inputDigit(key);
+        updateDecimalButton();
+    }
+
+    // Decimal point
+    if (key === '.') {
+        inputDecimal();
+    }
+
+    // Operators
+    if (['+', '-', '*', '/'].includes(key)) {
+        handleOperator(key);
+    }
+
+    // Equals or Enter
+    if (key === '=' || key === 'Enter') {
+        event.preventDefault(); // Prevent form submission if inside form
+        handleEquals();
+    }
+
+    // Backspace
+    if (key === 'Backspace') {
+        backspace();
+    }
+
+    // Clear (Escape or Delete)
+    if (key === 'Escape' || key === 'Delete') {
+        clearCalculator();
+    }
+});
+
+// Equals button
+document.querySelector('.btn.equal').addEventListener('click', handleEquals);
+
+// AC button
+document.querySelector('.btn.action').addEventListener('click', clearCalculator);
+
+// Initial display
+updateDisplay();
+updateDecimalButton();
+
+
 
