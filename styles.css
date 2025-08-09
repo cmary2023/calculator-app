@@ -1,8 +1,7 @@
-@font-face {
-    font-family: DS-DIGIB;
-    src: url(DS-DIGIB.woff) format('woff');
-}
 
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+            
 * {
     box-sizing: border-box;
     margin: 0;
@@ -60,7 +59,7 @@ body {
     padding: 0.5rem 1rem 16px;
     margin: 0.7rem 0;
     font-size: 24px;
-    font-family: "DS-DIGIB", monospace;
+    font-family: 'DS-Digital', sans-serif;                                           
     text-align: right;
     background: #afe0f1;
     border: 3px solid #1b1b1b;
