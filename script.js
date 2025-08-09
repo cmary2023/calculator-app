@@ -117,3 +117,38 @@ function handleOperator(nextOperator) {
     currentOperator = nextOperator;
     waitingForSecondOperand = true;
 }
+
+// Function to handle equals button
+function handleEquals() {
+    // If there's no operator, no first operand, or we're still waiting for a second operand, do nothing
+    if (currentOperator === null || firstOperand === null || waitingForSecondOperand) {
+        return;
+    }
+
+    const secondOperand = parseFloat(displayValue);
+    const result = operate(currentOperator, firstOperand, secondOperand);
+
+    // Show the full expression
+    expression += '=' + result;
+    display.value = expression;
+
+    // Prepare for next calculation
+    displayValue = String(result);
+    firstOperand = null;
+    currentOperator = null;
+    waitingForSecondOperand = false;
+    expression = '';
+
+    updateDecimalButton();
+}
+
+// Function to reset the calculator
+function clearCalculator() {
+    displayValue = '0';
+    firstOperand = null;
+    currentOperator = null;
+    waitingForSecondOperand = false;
+    expression = '';
+    updateDisplay();
+}
+
