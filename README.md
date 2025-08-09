@@ -24,16 +24,6 @@ Supports basic arithmetic operations, decimal input, keyboard control, and more.
 
 ---
 
-## 📂 Project Structure
-├── index.html # Main HTML structure
-├── style.css # Styling for layout and design
-├── script.js # Calculator functionality
-├── screenshot.png # Project screenshot
-└── README.md # Project documentation
-
-
----
-
 ## ⚙️ How It Works
 
 1. **HTML** defines the calculator layout and buttons.
