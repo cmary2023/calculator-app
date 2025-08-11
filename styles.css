@@ -9,29 +9,17 @@ body {
     height: 100vh;
 }
 
-/* Calculator container */
 .calculator {
-    background: #2a004d; /* deep purple */
+    background: #2a004d;
     border-radius: 20px;
     padding: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     width: 300px;
 }
 
-/* Header / Title bar */
-.calculator-header {
-    color: white;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-/* Main number display */
 .display {
     width: 100%;
-    font-size: 28px;
+    font-size: 22px;
     text-align: right;
     padding: 10px;
     border: none;
@@ -41,14 +29,12 @@ body {
     margin-bottom: 12px;
 }
 
-/* Buttons layout */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
 }
 
-/* General button style */
 .btn {
     padding: 15px;
     font-size: 18px;
@@ -58,7 +44,6 @@ body {
     transition: background 0.2s, transform 0.1s;
 }
 
-/* Hover and press effects */
 .btn:hover {
     transform: scale(1.05);
 }
@@ -66,7 +51,6 @@ body {
     transform: scale(0.95);
 }
 
-/* Button colors */
 .btn.action {
     background: #d93636;
     color: white;
@@ -84,12 +68,6 @@ body {
     color: white;
 }
 
-/* Bigger zero button */
-.wide {
-    grid-column: span 2;
-}
-
-/* Responsive adjustments */
 @media (max-width: 400px) {
     .calculator {
         width: 95%;
