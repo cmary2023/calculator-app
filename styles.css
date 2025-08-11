@@ -13,10 +13,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .calculator {
@@ -77,49 +79,55 @@ body {
 }
 
 /* Buttons Grid */
-.buttons-grid {
+/* Buttons grid */
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 8px;
 }
 
-/* Buttons */
-button.btn {
-    padding: 18px;
+/* General button style */
+.btn {
+    padding: 15px;
     font-size: 18px;
-    border: none;
-    border-radius: 50px;
-    background: black;
+    background: #444;
     color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.1s, background 0.3s;
+    transition: background 0.2s;
 }
 
-button.btn:hover {
-    transform: scale(1.05);
-    background: #5b439c;
+/* Button hover effect */
+.btn:hover {
+    background: #555;
 }
 
-button.action {
-    background: linear-gradient(to right, #7a289b, #c069b1);
-    color: rgb(19, 18, 18);
-    grid-column: span 2;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
+/* Operator buttons */
+.btn.operator {
+    background: #ff9500;
 }
 
-button.equal {
-    background: linear-gradient(to right, #7a289b, #c069b1);
-    color: #000;
-    grid-row: span 2;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
+.btn.operator:hover {
+    background: #e08900;
 }
 
-button.operator {
-    background: #e3c1e7;
-    color: #141313;
-    font-weight: 700;
+/* Equal button */
+.btn.equal {
+    background: #00b359;
+}
+
+.btn.equal:hover {
+    background: #00994d;
+}
+
+/* Action button (AC) */
+.btn.action {
+    background: #d93636;
+}
+
+.btn.action:hover {
+    background: #b32d2d;
 }
 
 /* Responsive adjustments */
@@ -133,8 +141,3 @@ button.operator {
     }
 }
 
-/* Accessibility */
-button.btn:focus {
-    outline: 2px solid #f8f3f7;
-    outline-offset: 2px;
-}
