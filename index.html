@@ -9,16 +9,18 @@
 </head>
 
 <body>
-    <main class="calculator">
-        <header class="calculator-header">
-            <h1>Digitron</h1>
-            <span class="led-indicator"></span>
-        </header>
-    <!-- Displays -->
-    <div class="display-container">
-        <div class="expression-display"></div>
-        <input type="text" class="display" readonly>
+    <div class="calculator">
+    <!-- Title/Header -->
+    <div class="calculator-header">
+        <span>Digitron</span>
+        <span>—</span> <!-- mimic window control -->
     </div>
+
+    <!-- Expression display (small text above main number) -->
+    <div class="expression-display"></div>
+
+    <!-- Main number display -->
+    <input type="text" class="display" value="0" readonly>
 
     <!-- Buttons -->
     <div class="buttons">
@@ -42,10 +44,11 @@
         <button class="btn digit">3</button>
         <button class="btn equal">=</button>
 
-        <button class="btn digit" style="grid-column: span 2;">0</button>
+        <button class="btn digit wide">0</button>
         <button class="btn digit" data-decimal>.</button>
     </div>
-    </main>
+</div>
+
 
     <script src="script.js"></script>
 </body>
