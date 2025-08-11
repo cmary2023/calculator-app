@@ -44,8 +44,11 @@ body {
 }
 .display {
    width: 100%;
-    padding: 0.5rem 1rem 16px;
-    margin: 0.7rem 0;
+    margin: 0.8rem 0;
+    padding-top: 1rem;
+    padding-right: 2px;
+    padding-bottom: 1rem;
+    padding-left: 2px;
     font-size: 24px;
     font-family: "DS-DIGIB", monospace;
     text-align: right;
@@ -85,6 +88,11 @@ body {
    color: rgb(19, 18, 18);
      font-weight: 700;
 }
+.btn.backspace{
+    background: linear-gradient(to right, #7a289b, #c069b1);
+    color: rgb(19, 18, 18);
+    font-weight: 700;
+}
 .btn.operator {
    background: #e3c1e7;
     color: #141313;
@@ -95,10 +103,6 @@ body {
     color: #000;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
-}
-.btn.digit {
-    background: #555;
-    color: white;
 }
 
 /* Accessibility */
