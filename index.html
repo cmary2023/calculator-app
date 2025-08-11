@@ -14,30 +14,37 @@
             <h1>Digitron</h1>
             <span class="led-indicator"></span>
         </header>
+    <!-- Displays -->
+    <div class="display-container">
+        <div class="expression-display"></div>
+        <input type="text" class="display" readonly>
+    </div>
 
-        <section class="display-section">
-            <input type="text" class="display" readonly value="0" />
-        </section>
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="btn action">AC</button>
+        <button class="btn" onclick="backspace()">⌫</button>
+        <button class="btn operator">/</button>
+        <button class="btn operator">x</button>
 
-        <section class="buttons-grid">
-            <button class="btn action">AC</button>
-            <button class="btn operator">/</button>
-            <button class="btn operator">x</button>
-            <button class="btn digit">7</button>
-            <button class="btn digit">8</button>
-            <button class="btn digit">9</button>
-            <button class="btn operator">-</button>
-            <button class="btn digit">4</button>
-            <button class="btn digit">5</button>
-            <button class="btn digit">6</button>
-            <button class="btn operator">+</button>
-            <button class="btn digit">1</button>
-            <button class="btn digit">2</button>
-            <button class="btn digit">3</button>
-            <button class="btn equal" rowspan="2">=</button>
-            <button class="btn digit">0</button>
-            <button class="btn digit">.</button>
-        </section>
+        <button class="btn digit">7</button>
+        <button class="btn digit">8</button>
+        <button class="btn digit">9</button>
+        <button class="btn operator">-</button>
+
+        <button class="btn digit">4</button>
+        <button class="btn digit">5</button>
+        <button class="btn digit">6</button>
+        <button class="btn operator">+</button>
+
+        <button class="btn digit">1</button>
+        <button class="btn digit">2</button>
+        <button class="btn digit">3</button>
+        <button class="btn equal">=</button>
+
+        <button class="btn digit" style="grid-column: span 2;">0</button>
+        <button class="btn digit" data-decimal>.</button>
+    </div>
     </main>
 
     <script src="script.js"></script>
