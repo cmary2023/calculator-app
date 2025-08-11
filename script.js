@@ -104,7 +104,7 @@ function operate(operator, a, b) {
         case '/': result = divide(a, b); break;
         default: return b;
     }
-    return isNaN(result) ? "Cannot divide by zero!" : roundResult(result);
+    return isNaN(result) ? "Nice try, Einstein… you can’t divide by zero!" : roundResult(result);
 }
 
 document.querySelectorAll('.btn.digit').forEach(button => {
@@ -135,3 +135,4 @@ document.addEventListener('keydown', (event) => {
 });
 
 updateDisplay();
+
