@@ -1,4 +1,3 @@
-/* Background */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -24,18 +23,9 @@ body {
     color: white;
     font-size: 14px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 8px;
-}
-
-/* Expression display */
-.expression-display {
-    font-size: 14px;
-    color: #bbb;
-    text-align: right;
-    padding: 2px;
-    min-height: 20px;
 }
 
 /* Main number display */
@@ -95,7 +85,7 @@ body {
 }
 
 /* Bigger zero button */
-.btn[data-decimal], .btn.digit[style] {
+.wide {
     grid-column: span 2;
 }
 
